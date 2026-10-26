@@ -1,0 +1,158 @@
+bismarazi@DESKTOP-6D0MCTO:~$ cat session_lab4.txt
+Script started on 2026-10-26 19:22:31+05:00 [TERM="dumb" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+bismarazi@DESKTOP-6D0MCTO:~$ sudo mkdir /test
+[sudo: authenticate] Password:
+mkdir: /test: File exists
+bismarazi@DESKTOP-6D0MCTO:~$ sudo chmod 777 /test
+bismarazi@DESKTOP-6D0MCTO:~$ ls -ld /test
+drwxrwxrwx 2 root root 4096 Oct 26 19:13 /test
+bismarazi@DESKTOP-6D0MCTO:~$ sudo touch /test/testfile.txt
+bismarazi@DESKTOP-6D0MCTO:~$ echo "This is LAB 4 test file" | sudo tee /test/testfile.txt
+This is LAB 4 test file
+bismarazi@DESKTOP-6D0MCTO:~$ sudo chmod 400 /test/testfile.txt
+bismarazi@DESKTOP-6D0MCTO:~$ ls -l /test/testfile.txt
+-r-------- 1 root root 24 Oct 26 19:23 /test/testfile.txt
+bismarazi@DESKTOP-6D0MCTO:~$ sudo adduser Usama
+fatal: The user `Usama' already exists.
+bismarazi@DESKTOP-6D0MCTO:~$ sudo adduser Usman
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for Usman
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] y
+bismarazi@DESKTOP-6D0MCTO:~$ su -l Usman
+Password:
+Welcome to Ubuntu 26.04.1 LTS (GNU/Linux 6.18.54.1-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://docs.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Oct 26 19:25:24 PKT 2026
+
+  System load:  0.08                Processes:             35
+  Usage of /:   0.2% of 1006.85GB   Users logged in:       2
+  Memory usage: 21%                 IPv4 address for eth0: 172.28.230.128
+  Swap usage:   0%
+
+  => /usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2 is using 100.0% of
+     96MB
+
+ * Canonical Workshop gives developers fast, composable, reproducible, and
+   secure developer environments that are perfect for agentic workflows.
+
+   https://ubuntu.com/workshop
+
+This message is shown once a day. To disable it please create the
+/home/Usman/.hushlogin file.
+Usman@DESKTOP-6D0MCTO:~$ cat /test/testfile.txt
+cat: /test/testfile.txt: Permission denied
+Usman@DESKTOP-6D0MCTO:~$ exit
+logout
+bismarazi@DESKTOP-6D0MCTO:~$ sudo chmod 777 /test/testfile.txt
+bismarazi@DESKTOP-6D0MCTO:~$ ls -l /test/testfile.txt
+-rwxrwxrwx 1 root root 24 Oct 26 19:23 /test/testfile.txt
+bismarazi@DESKTOP-6D0MCTO:~$ su -l Usman
+Password:
+Usman@DESKTOP-6D0MCTO:~$ cat /test/testfile.txt
+This is LAB 4 test file
+Usman@DESKTOP-6D0MCTO:~$ exit
+logout
+bismarazi@DESKTOP-6D0MCTO:~$ exit
+exit
+
+Script done on 2026-10-26 19:26:53+05:00 [COMMAND_EXIT_CODE="0"]
+bismarazi@DESKTOP-6D0MCTO:~$ cat ~/session_lab4.txt
+Script started on 2026-10-26 19:22:31+05:00 [TERM="dumb" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+bismarazi@DESKTOP-6D0MCTO:~$ sudo mkdir /test
+[sudo: authenticate] Password:
+mkdir: /test: File exists
+bismarazi@DESKTOP-6D0MCTO:~$ sudo chmod 777 /test
+bismarazi@DESKTOP-6D0MCTO:~$ ls -ld /test
+drwxrwxrwx 2 root root 4096 Oct 26 19:13 /test
+bismarazi@DESKTOP-6D0MCTO:~$ sudo touch /test/testfile.txt
+bismarazi@DESKTOP-6D0MCTO:~$ echo "This is LAB 4 test file" | sudo tee /test/testfile.txt
+This is LAB 4 test file
+bismarazi@DESKTOP-6D0MCTO:~$ sudo chmod 400 /test/testfile.txt
+bismarazi@DESKTOP-6D0MCTO:~$ ls -l /test/testfile.txt
+-r-------- 1 root root 24 Oct 26 19:23 /test/testfile.txt
+bismarazi@DESKTOP-6D0MCTO:~$ sudo adduser Usama
+fatal: The user `Usama' already exists.
+bismarazi@DESKTOP-6D0MCTO:~$ sudo adduser Usman
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for Usman
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] y
+bismarazi@DESKTOP-6D0MCTO:~$ su -l Usman
+Password:
+Welcome to Ubuntu 26.04.1 LTS (GNU/Linux 6.18.54.1-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://docs.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Mon Oct 26 19:25:24 PKT 2026
+
+  System load:  0.08                Processes:             35
+  Usage of /:   0.2% of 1006.85GB   Users logged in:       2
+  Memory usage: 21%                 IPv4 address for eth0: 172.28.230.128
+  Swap usage:   0%
+
+  => /usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2 is using 100.0% of
+     96MB
+
+ * Canonical Workshop gives developers fast, composable, reproducible, and
+   secure developer environments that are perfect for agentic workflows.
+
+   https://ubuntu.com/workshop
+
+This message is shown once a day. To disable it please create the
+/home/Usman/.hushlogin file.
+Usman@DESKTOP-6D0MCTO:~$ cat /test/testfile.txt
+cat: /test/testfile.txt: Permission denied
+Usman@DESKTOP-6D0MCTO:~$ exit
+logout
+bismarazi@DESKTOP-6D0MCTO:~$ sudo chmod 777 /test/testfile.txt
+bismarazi@DESKTOP-6D0MCTO:~$ ls -l /test/testfile.txt
+-rwxrwxrwx 1 root root 24 Oct 26 19:23 /test/testfile.txt
+bismarazi@DESKTOP-6D0MCTO:~$ su -l Usman
+Password:
+Usman@DESKTOP-6D0MCTO:~$ cat /test/testfile.txt
+This is LAB 4 test file
+Usman@DESKTOP-6D0MCTO:~$ exit
+logout
+bismarazi@DESKTOP-6D0MCTO:~$ exit
+exit
+
+Script done on 2026-10-26 19:26:53+05:00 [COMMAND_EXIT_CODE="0"]
+bismarazi@DESKTOP-6D0MCTO:~$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
